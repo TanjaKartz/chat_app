@@ -2,7 +2,6 @@ var Chat = (function () {    // Module's code here... })()
 
   //user
   let users = []
-
   let module = {}
 
  module.joinChat = function (user) {
@@ -26,16 +25,34 @@ let userAlreadyConnected = false
 
 }
 }
+let messages = ['shit']
 
 module.sendChat = function (message) {
-  //check if bad word is in massage
+  console.log ('A message is written:', message)
+//check if bad word is in massage
+let badWordInMessage = false
 
-  //if not, push the message
-  message.push(message)
+  for (let i = 0; i < messages.length; i++) {
+    if (messages[i] == message) {
+        badWordInMessage = true
+    }
+  }
+
+//if not, push the message
+if(badWordInMessage) {
+  console.log('message cannot contain bad words: ', message)
+} else {
+  messages.push(message)
 }
+}
+
   return module
+
 
 })()
 
 Chat.joinChat('Sonia');
 Chat.joinChat('Tanja');
+
+Chat.sendChat('Hello');
+Chat.sendChat('shit'); //okay, so this only works when I type in only the bad word. when I type a sentence containing the bad word, it is not detected. How to fix this???
