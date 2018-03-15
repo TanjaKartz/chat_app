@@ -1,47 +1,41 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
-
         <title>WebSockets - Simple chat</title>
 
         <style>
-
         * { font-family:tahoma; font-size:12px; padding:0px; margin:0px; }
-
         p { line-height:18px; }
-
         div { width:500px; margin-left:auto; margin-right:auto;}
-
         #content { padding:5px; background:#ddd; border-radius:5px; overflow-y: scroll;
-
                    border:1px solid #CCC; margin-top:10px; height: 160px; }
-
         #input { border-radius:2px; border:1px solid #ccc;
-
                  margin-top:10px; padding:5px; width:400px;  }
-
         #status { width:88px; display:block; float:left; margin-top:15px; }
-
         </style>
-
     </head>
-
     <body>
-
+      <!-- Search function starts here -->
+      <div><input type="text" id="myInput" keyup="myFunction()" placeholder="Search by content or author.."></div>
+      <!-- Search function ends here -->
+      <!--Logout starts here-->
+       <div><a href="javascript:logout();">Leave chat</a></div>
+      <!-- Logout ends here-->
         <div id="content"></div>
-
         <div>
+        <!--  <a href="javascript:sendMessage();">Send message</a></div> -->
+          <form>
+  <input type="button" value="Send message" onclick="javascript:Chat.sendChat();" />
+  </form>
+  <input type="text" id="input" keyup="myFunction" />
+</div>
+          <!--  <span id="status">Send message</span> -->
+            <!-- <button type="button">Send message</button> -->
+<!--test starts-->
 
-            <span id="status">Connecting...</span>
-            <input type="text" id="input" disabled="disabled" />
-
-        </div>
-
-      <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/app.js"></script> -->
-
-        <script src="./app.js"></script>
-
+<!-- Test ends -->
+  <!--      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+        <script src="./App.js"></script>
     </body>
 </html>
