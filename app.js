@@ -1,3 +1,5 @@
+Made by Sonia and Tanja
+
 var Chat = (function () {
  // Users
  let users = []
