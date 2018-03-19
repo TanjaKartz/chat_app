@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <link rel=”stylesheet” href=”bootstrap.css”>
         <meta charset="utf-8">
-        <title>WebSockets - Simple chat</title>
+        <title>Chat</title>
 
         <style>
         * { font-family:tahoma; font-size:12px; padding:0px; margin:0px; }
@@ -14,10 +15,12 @@
                  margin-top:10px; padding:5px; width:400px;  }
         #status { width:88px; display:block; float:left; margin-top:15px; }
         </style>
+
     </head>
     <body>
       <!-- Search function starts here -->
-      <div><input type="text" id="myInput" keyup="myFunction()" placeholder="Search by content or author.."></div>
+      <div name="search-users"> <input type="text" id="myInput" keyup="myFunction()" placeholder="Search by content or author..">
+      </div>
       <!-- Search function ends here -->
       <!--Logout starts here-->
        <div><a href="javascript:logout();">Leave chat</a></div>
@@ -26,16 +29,10 @@
         <div>
         <!--  <a href="javascript:sendMessage();">Send message</a></div> -->
           <form>
-  <input type="button" value="Send message" onclick="javascript:Chat.sendChat();" />
+  <input type="button" class="btn btn-primary" value="Send message" onclick="javascript:Chat.sendChat();" />
   </form>
   <input type="text" id="input" keyup="myFunction" />
 </div>
-          <!--  <span id="status">Send message</span> -->
-            <!-- <button type="button">Send message</button> -->
-<!--test starts-->
-
-<!-- Test ends -->
-  <!--      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
         <script src="./App.js"></script>
     </body>
 </html>
